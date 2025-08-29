@@ -87,8 +87,8 @@ export default function Index() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Items</h1>
-
+      <center><h1>Junjie Notes</h1>
+      <br></br>
       <Form method="get" style={{ marginBottom: 20 }}>
         <input
           type="search"
@@ -98,6 +98,7 @@ export default function Index() {
         />
         <button type="submit">Search</button>
       </Form>
+      </center>
 
       {actionData?.error && (
         <p style={{ color: "red" }}>{actionData.error}</p>
@@ -117,8 +118,8 @@ export default function Index() {
           </li>
         ))}
       </ul>
-
-      <h2>Add New Item</h2>
+      <br></br>
+      <h2>Add New Notes</h2>
       <Form method="post" style={{ marginTop: 20 }}>
         <input type="text" name="name" placeholder="Item name" required />
         <input
@@ -128,7 +129,7 @@ export default function Index() {
           style={{ marginLeft: 10 }}
         />
         <button type="submit" style={{ marginLeft: 10 }}>
-          Add
+          Send
         </button>
       </Form>
     </div>
