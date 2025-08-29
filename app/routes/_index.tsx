@@ -119,6 +119,7 @@ export default function Index() {
         ))}
       </ul>
       <br></br>
+      <center>
       <h2>Add New Notes</h2>
       <Form method="post" style={{ marginTop: 20 }}>
         <input type="text" name="name" placeholder="Item name" required />
@@ -132,6 +133,7 @@ export default function Index() {
           Send
         </button>
       </Form>
+      </center>
     </div>
   );
 }
