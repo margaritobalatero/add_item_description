@@ -93,7 +93,7 @@ export default function Index() {
         <input
           type="search"
           name="q"
-          placeholder="Search items"
+          placeholder="Search Post"
           defaultValue={search}
         />
         <button type="submit">Search</button>
