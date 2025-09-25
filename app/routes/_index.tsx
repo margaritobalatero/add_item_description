@@ -87,7 +87,7 @@ export default function Index() {
 
   return (
     <div style={{ padding: 20 }}>
-      <center><h1>Junjie Notes</h1>
+      <center><h1>Post Anything</h1>
       <br></br>
       <Form method="get" style={{ marginBottom: 20 }}>
         <input
@@ -107,12 +107,12 @@ export default function Index() {
       <ul>
         {items.map((item) => (
           <li key={item.id} style={{ marginBottom: 8 }}>
-            <strong>{item.name}</strong>: {item.description} -{" "}
-            <a href={`/items/${item.id}`}>Edit</a>
+            • <strong>{item.name}</strong>  -  {item.description} {/* - */}{" "}
+            <a href={`/items/${item.id}`}>  {/* Edit */}</a>
             <Form method="post" style={{ display: "inline", marginLeft: 10 }}>
               <input type="hidden" name="id" value={item.id} />
               <button type="submit" name="intent" value="delete" style={{ color: "red" }}>
-                Delete
+                  {/* Delete */}
               </button>
             </Form>
           </li>
@@ -120,13 +120,13 @@ export default function Index() {
       </ul>
       <br></br>
       <center>
-      <h2>Add New Notes</h2>
+      <h2>Add New Post</h2>
       <Form method="post" style={{ marginTop: 20 }}>
-        <input type="text" name="name" placeholder="Item name" required />
+        <input type="text" name="name" placeholder="Post name" required />
         <input
           type="text"
           name="description"
-          placeholder="Description (optional)"
+          placeholder="Post Content"
           style={{ marginLeft: 10 }}
         />
         <button type="submit" style={{ marginLeft: 10 }}>
